@@ -1,0 +1,61 @@
+@import ../index
+    
+.nav-bar
+    @include dFlex
+    justify-content: space-between
+    padding-left: 166px
+    padding-right: 100px
+    background: linear-gradient(180deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
+    .logo
+        @include dFlex
+        .nns-mobile
+            display: none
+        .brand-name
+            margin-left: 10px
+            font-family: $primary-font
+            font-size: 23.9px
+            font-style: normal
+            font-weight: 700
+            line-height: 29.885px
+    .buttons
+        .sign-in-btn
+            background-color: $button-color
+            color: #fff
+            width: 120px
+            height: 40px
+            padding: 10px 30px
+            font-family: $button-font
+            font-size: 14px
+            border: 0px
+            border-radius: 5px
+        .header-icons
+            width: 40px
+            height: 40px
+            border: 1px solid transparent 
+            background-color: #fff
+            margin-left: 20px
+            border-radius: 5px
+            .icons
+                width: 20px 
+                color: #F1ECFC
+
+@media only screen and (max-width: 576px ) 
+    .nav-bar
+        padding-left: 10px
+        padding-right: 10px
+        .logo
+            // width: 
+            .nns-desktop
+                display: none
+            .nns-mobile
+                display: block
+            .brand-name
+                display: none
+            
+        .buttons
+            min-width: 50%
+            margin-left: 5px
+            .header-icons
+                margin-left: 5px 
+
+                

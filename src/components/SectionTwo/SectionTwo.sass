@@ -1,0 +1,51 @@
+@import ../index
+
+.section-two
+    width: 100%
+    height: 100%
+    font-family: $primary-font
+    background-color: #FBFAFA
+    padding-top: 150px
+    padding-bottom: 150px
+    .text-section
+        text-align: center
+        width: 50%
+        margin: 0px auto
+        .heading
+            width
+            font-size: 60px
+            font-style: normal
+            font-weight: 700
+            line-height: 75px
+            margin: 20px auto
+        .description
+            width: 60%
+            color: #7F7F8F
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+            margin: 25px auto
+        .noggles
+            @include dFlex
+            gap: 15px
+            color: $button-color
+            font-size: 16px
+            font-style: normal
+            font-weight: 600
+            button
+                background-color: #FBFAFA
+                border: 0
+
+
+
+@media only screen and (max-width: 576px ) 
+    .section-two
+        .text-section
+            width: 95%
+            text-align: center
+            .heading
+                font-size: 36px
+                line-height: 75px
+            .description
+                width: 95%

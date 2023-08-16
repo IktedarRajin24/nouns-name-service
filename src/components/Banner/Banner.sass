@@ -1,0 +1,66 @@
+@import ../index
+
+.banner
+    background: linear-gradient(180deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
+    padding-top: 150px
+    font-family: $button-font
+    .banner-heading
+        font-size: 64px
+        font-style: normal
+        font-weight: 600
+        line-height: 80px
+        width: 50%
+        margin: 50px auto
+        text-align: center
+    .banner-description
+        color: #7F7F8F
+        width: 25%
+        margin: 10px auto
+        text-align: center
+        font-family: $button-font
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: 180%
+    .banner-form
+        width: 30%
+        height: 60px
+        margin: 50px auto
+        @include dFlex
+        margin-bottom: 160px
+        .banner-input
+            width: 70%
+            height: 100%
+            color: #7F7F8F
+            font-family: $button-font
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+            padding-left: 30px
+            border-radius: 5px
+            border: 1px solid #E5E1FC
+            filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+            &:focus
+                border: 1px solid $button-color
+                outline: none
+        .banner-btn
+            width: 15%
+            height: 100%
+            background-color: $button-color
+            border: 0
+            border-radius: 5px
+            .search-icon
+                width: 40px
+                color: #fff
+                &:hover
+                    width: 45px
+
+@media only screen and (max-width: 576px ) 
+    .banner
+        .banner-heading
+           width: 100% 
+        .banner-description
+            width: 90%
+        .banner-form
+            width: 100%        
