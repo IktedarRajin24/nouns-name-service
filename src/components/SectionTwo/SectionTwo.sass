@@ -12,7 +12,6 @@
         width: 50%
         margin: 0px auto
         .heading
-            width
             font-size: 60px
             font-style: normal
             font-weight: 700
@@ -36,8 +35,117 @@
             button
                 background-color: #FBFAFA
                 border: 0
+    .image-container-sm
+        display: none
+        width: 83%
+        margin: 50px auto 10px
+        text-align: center
+    .image-container-lg
+        display: block
+        width: 1100px
+        height: 350px
+        margin: 100px auto 10px
+        position: relative
+        .img
+            position: absolute
+        #image-1
+            top: 90px
+        #image-2
+            top: 180px
+        #image-3
+            top: 90px
+            left: 90px
+        #image-4
+            left: 180px
+        #image-5
+            left: 180px
+            top: 90px 
+        #image-6
+            left: 180px
+            top: 180px 
+        #image-7
+            left: 180px
+            top: 270px 
+        #image-8
+            left: 270px
+        #image-9
+            top: 270px
+            left: 270px
+        #image-10
+            left: 360px
+        #image-11
+            left: 360px
+            top: 90px
+        #image-12
+            left: 360px
+            top: 180px
+        #image-13
+            left: 360px
+            top: 270px
+        #image-14
+            left: 450px
+        #image-15
+            left: 450px
+            top: 90px
+        #image-16
+            left: 450px
+            top: 180px
+        #image-17
+            left: 450px
+            top: 270px
+        #image-18
+            left: 540px
+            top: 90px
+        #image-19
+            left: 540px
+            top: 180px
+        #image-20
+            left: 630px
+            top: 90px
+        #image-21
+            left: 630px
+            top: 180px
+        #image-22
+            left: 720px
+        #image-23
+            left: 720px
+            top: 90px
+        #image-24
+            left: 720px
+            top: 180px
+        #image-25
+            left: 720px
+            top: 270px
+        #image-26
+            left: 810px
+        #image-27
+            left: 810px
+            top: 270px
+        #image-28
+            left: 900px
+        #image-29
+            left: 900px
+            top: 90px
+        #image-30
+            left: 900px
+            top: 180px
+        #image-31
+            left: 900px
+            top: 270px
+        #image-32
+            left: 990px
+        #image-33
+            left: 990px
+            top: 90px
+        #image-34
+            left: 990px
+            top: 180px
+        #image-35
+            left: 990px
+            top: 270px
 
 
+//----------------------------------- Media Queries ------------------------------------------
 
 @media only screen and (max-width: 576px ) 
     .section-two
@@ -49,3 +157,12 @@
                 line-height: 75px
             .description
                 width: 95%
+        .image-container-lg
+            display: none 
+        .image-container-sm
+            @include dFlex
+            flex-wrap: wrap
+            gap: 10px 
+        
+        
+            
