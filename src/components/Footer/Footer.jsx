@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import './Footer.sass'
-import ScrollAnimation from '../ScrollAnimation/ScrollAnimation';
+import ScrollAnimation from '../PageOne/ScrollAnimation/ScrollAnimation';
 
 const Footer = () => {
     return (

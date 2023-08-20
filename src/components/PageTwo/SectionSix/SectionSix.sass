@@ -1,0 +1,62 @@
+@import ../../index.sass
+
+.sectionSix
+    @include dFlex
+    flex-direction: row
+    width: 100%
+    font-family: $primary-font
+    background-color: #FBFAFA
+    .text-section
+        text-align: left
+        width: 50%
+        .heading
+            width: 30%
+            
+            margin-bottom: 30px
+        .description
+            width: 40%
+            color: #7F7F8F
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+            margin-bottom: 30px
+        .start-btn
+            width: 150px
+            height: 38px
+            background-color: $button-color
+            color: #fff
+            border: 0
+            border-radius: 5px
+            margin-bottom: 30px
+    .image-section
+        width: 300px
+        height: 350px
+        margin-bottom: 50px
+        margin-top: 50px
+        padding-bottom: 20px
+        border: 0
+        position: relative
+        @include dFlex
+        flex-direction: column
+        .card
+            width: 315px
+            height: 60px
+            border: 1px solid rgba(248, 76, 248, 0.1)
+            border-radius: 15px
+            padding: 20px 30px
+            background-color: #fff
+            filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+            position: absolute
+            @include dFlex
+            justify-content: start
+            gap: 30px
+        #card-1
+            top: 0
+        #card-2
+            top: 130px
+            left: 80px
+        #card-3
+            top: 260px
+            left: -50px
+            

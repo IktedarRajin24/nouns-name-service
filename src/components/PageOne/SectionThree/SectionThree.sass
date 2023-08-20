@@ -1,0 +1,77 @@
+@import ../../index
+
+.section-three
+    @include dFlex
+    flex-direction: row
+    width: 100%
+    font-family: $primary-font
+    background-color: #FBFAFA
+    box-shadow: 0px 5px 10px #7F7F8F, 
+    .text-section
+        text-align: left
+        width: 50%
+        .heading
+            font-size: 60px
+            font-style: normal
+            font-weight: 700
+            line-height: 75px
+            margin-bottom: 30px
+        .description
+            width: 50%
+            color: #7F7F8F
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+            margin-bottom: 30px
+        .start-btn
+            width: 150px
+            height: 38px
+            background-color: $button-color
+            color: #fff
+            border: 0
+            border-radius: 5px
+            margin-bottom: 30px
+    .image-section
+        width: 450px
+        height: 450px
+        text-align: center
+        margin-bottom: 50px
+        margin-top: 50px
+        padding-bottom: 20px
+        border: 0
+        border-radius: 40px
+        background-color: #fff
+        box-shadow: 1px 1px .5em #7F7F8F
+        @include dFlex
+        flex-direction: column
+        img
+            width: 400px
+        .shadow
+            width: 215px
+            height: 23px
+            background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(4, 0, 50, 0.10) 4.69%, rgba(115, 103, 255, 0.00) 100%)
+
+@media only screen and (max-width: 576px ) 
+    .section-three
+        @include dFlex
+        flex-direction: column-reverse
+        .text-section
+            width: 80%
+            text-align: center
+            .heading
+                font-size: 36px
+                line-height: 75px
+            .description
+                @include dFlex
+                width: 80%
+                margin-left: auto
+                margin-right: auto
+        .image-section
+            width: 340px
+            height: 340px
+            img
+                width: 300px
+        .shadow
+            width: 150px
+            height: 15px

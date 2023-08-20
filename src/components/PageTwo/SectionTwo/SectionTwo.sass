@@ -1,0 +1,63 @@
+@import ../../index
+
+.sectionTwo
+    width: 100%
+    overflow-x: hidden
+    margin: 50px 0 10px
+    padding: 10px 0px 150px  
+    background: linear-gradient(0deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
+    @include dFlex 
+    justify-content: space-around
+    font-family: $button-font
+    .text-section
+        width: 600px
+        text-align: left
+        padding-left: 80px
+        h1
+            width: 50%
+        p
+            width: 50%
+            color: $grey-color
+    .image-section
+        position: relative
+        width: 600px
+        padding: 70px 0
+        .image-2
+            background-color: #fff
+            width: 350px
+            height: 300px
+            position: relative
+            border: 1px solid #FEF9FF
+            border-radius: 20px
+            filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+            .user
+                position: absolute
+                width: 225px
+                bottom: 20px
+                right: 20px
+            .noggle
+                width: 146px
+                height: 45px
+                position: absolute
+                top: 125px
+                right: 65px
+            .tick
+                width: 25px
+                position: absolute
+                right: 20px
+                top: 20px
+            .image-1
+                @include dFlex
+                background-color: #fff
+                width: 175px
+                height: 175px
+                position: absolute
+                top: -70px
+                left: -80px
+                border: 1px solid #FEF9FF
+                border-radius: 20px
+                z-index: 1000
+                filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+                
+
+    

@@ -1,0 +1,103 @@
+@import ../../index
+
+.sectionOne
+    width: 100%
+    overflow-x: hidden
+    margin: 50px 0 150px
+    padding: 10px 0 150px  
+    background: linear-gradient(0deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
+    @include dFlex 
+    justify-content: space-around
+    font-family: $button-font
+    .image
+        width: 450px
+        height: 450px
+        background-color: #fff 
+        margin: 40px 0 40px
+        border: 1px solid #E5E1FC
+        border-radius: 10px
+        @include dFlex
+        .gif
+            width: 400px
+            border-radius: 10px
+    .details-area
+        width: 700px
+        text-align: left
+        margin-left: 0px
+        .availability
+            .available
+                @include dFlex
+                justify-content: start
+                color: #7367FF
+                
+            .unavailable
+                @include dFlex
+                justify-content: start
+                color: #FF6355
+            .hidden
+                display: none
+        .benefits
+            list-style: none
+            padding-inline-start: 0
+            li
+                @include dFlex
+                justify-content: start
+                color: $grey-color
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+                line-height: 220%
+                img
+                    width: 20px
+                    margin-right: 10px
+        .get-btn
+            background-color: $button-color
+            color: #fff
+            border: 0px
+            border-radius: 5px
+            padding: 20px 30px
+            margin: 10px 0
+        .price-section
+            color: $grey-color
+            b
+                color: black
+            .price-details
+                font-size: 14px
+                font-style: normal
+                font-weight: 400
+                line-height: 100%
+
+
+        .banner-form
+            width: 505px
+            height: 60px
+            margin: 50px 0 20px
+            @include dFlex
+            justify-content: start
+            .banner-input
+                width: 70%
+                height: 100%
+                color: #7F7F8F
+                font-family: $button-font
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+                line-height: 180%
+                padding-left: 30px
+                border-radius: 10px
+                border: 1px solid #E5E1FC
+                filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+                &:focus
+                    border: 1px solid $button-color
+                    outline: none
+            .banner-btn
+                width: 15%
+                height: 100%
+                background-color: $button-color
+                border: 0
+                border-radius: 10px
+                .search-icon
+                    width: 40px
+                    color: #fff
+                    &:hover
+                        width: 45px

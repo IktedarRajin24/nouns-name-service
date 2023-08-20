@@ -1,0 +1,88 @@
+@import ../../index.sass
+
+.sectionFive
+    @include dFlex
+    flex-direction: row
+    justify-content: space-around
+    width: 100%
+    font-family: $primary-font
+    background-color: #FBFAFA
+    .text-section
+        text-align: left
+        width: 20%
+        @include dFlex
+        align-items: start
+        flex-direction: column
+        padding-left: 70px
+        .heading
+            width: 70%
+            
+            margin-bottom: 30px
+        .description
+            width: 80%
+            color: #7F7F8F
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+            margin-bottom: 30px
+    .image-section
+        width: 400px
+        height: 350px
+        margin-bottom: 50px
+        margin-top: 50px
+        padding-bottom: 20px
+        background-color: #fff
+        border: 1px solid #E5E1FC
+        border-radius: 15px
+        filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+        
+        .my-info
+            @include dFlex
+            flex-direction: column
+            position: relative
+            .user-img
+                width: 120px
+                position: absolute
+                top: -30%
+            .name
+                margin-top: 70px
+                font-size: 26px
+                font-style: normal
+                font-weight: 500
+                line-height: 60px
+            .my-desc
+                margin-bottom: 40px
+
+        hr
+            width: 90%
+            margin: 10px auto
+            height: 1px
+            border: none
+            background-color: #E5E1FC
+        .props-projects
+            @include dFlex
+            margin: 0px 30px 0
+            justify-content: space-between
+            
+            p
+                font-size: 12px
+                font-style: normal
+                font-weight: 700
+                line-height: 20px
+            .img
+                position: absolute
+            .props
+                position: relative
+                #img-1
+                    left: 0px
+                #img-2
+                    left: 30px
+                #img-3
+                    left: 60px
+            .projects
+                position: relative
+                #img-1
+                    left: 0px
+                #img-2
+                    left: 30px

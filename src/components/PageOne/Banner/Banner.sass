@@ -1,4 +1,4 @@
-@import ../index
+@import ../../index
 
 .banner
     background: linear-gradient(180deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
@@ -23,11 +23,10 @@
         font-weight: 400
         line-height: 180%
     .banner-form
-        width: 30%
+        width: 505px
         height: 60px
-        margin: 50px auto
+        margin: 50px auto 20px
         @include dFlex
-        margin-bottom: 160px
         .banner-input
             width: 70%
             height: 100%
@@ -38,7 +37,7 @@
             font-weight: 400
             line-height: 180%
             padding-left: 30px
-            border-radius: 5px
+            border-radius: 10px
             border: 1px solid #E5E1FC
             filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
             &:focus
@@ -49,12 +48,47 @@
             height: 100%
             background-color: $button-color
             border: 0
-            border-radius: 5px
+            border-radius: 10px
             .search-icon
                 width: 40px
                 color: #fff
                 &:hover
                     width: 45px
+    .visible
+        visibility: visible 
+    .invisible
+        visibility: hidden
+    .search-result
+        width: 420px
+        height: 50px
+        margin: 10px auto 50px
+        background-color: #fff
+        border: 1px solid #d3f1f1
+        border-radius: 10px
+        padding: 5px 20px
+    
+        @include dFlex
+        justify-content: space-between
+        .result-available
+            background-color: #88EFC433
+            color: #35BE85
+            border: 0
+            border-radius: 50px
+            padding: 5px 20px 
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
+        .result-unavailable
+            background-color: #FF63551A
+            color: #FF6355
+            border: 0
+            border-radius: 50px
+            padding: 5px 20px 
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            line-height: 180%
 
 @media only screen and (max-width: 576px ) 
     .banner
