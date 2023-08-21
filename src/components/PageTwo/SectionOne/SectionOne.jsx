@@ -4,9 +4,9 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import './SectionOne.sass'
 
 const SectionOne = () => {
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState(localStorage.getItem('query'));
     const [apiQuery, setApiQuery] = useState("");
-    const [available, setAvailable] =useState(false);
+    const [available, setAvailable] =useState(localStorage.getItem('availability'));
     const [names, setNames] = useState([]);
 
     useEffect(()=>{
@@ -31,11 +31,6 @@ const SectionOne = () => {
       setQuery(e.target.value);
       setAvailable(names.find(name => name.name === query)? true: false)
     }
-    useEffect(()=>{
-        const query = localStorage.getItem('query')
-        const availability = localStorage.getItem('availability')
-        
-    }, [])
     return (
         <div className='sectionOne'>
             <div className='image'>
@@ -47,10 +42,12 @@ const SectionOne = () => {
                     <input onChange={handleChange} value={query} className='banner-input' type="text" name="domain" id="domain" placeholder={localStorage.getItem('query')} />
                     <button className='banner-btn'><MagnifyingGlassIcon className='search-icon'/></button>
                 </div>
+                
                 <div className='availability'>
-                    <span className={` ${localStorage.getItem('availability')? "available" : "hidden"}`}><img src="images/tick.png" alt="" /><p>Your NNS is available</p></span>
-                    <span className={` ${!localStorage.getItem('availability')? "unavailable" : "hidden"}`}><img src="images/cross.png" alt="" /><p>Your NNS is not available</p></span>
+                    <span className={` ${!available? "available" : "hidden"}`}><img src="images/tick.png" alt="" /><p>Your NNS is available</p></span>
+                    <span className={` ${available? "unavailable" : "hidden"}`}><img src="images/cross.png" alt="" /><p>Your NNS is not available</p></span>
                 </div>
+                <p className='search-result'>{query}</p>
                 <div className='price-section'>
                     <p>own forever for <b>$800.00</b></p>
                     <p className='price-details'>popular names are more expensive</p>

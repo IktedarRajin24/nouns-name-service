@@ -24,6 +24,11 @@
         width: 700px
         text-align: left
         margin-left: 0px
+        .search-result
+            font-size: 60px
+            font-style: normal
+            font-weight: 500
+            line-height: 20px
         .availability
             .available
                 @include dFlex
@@ -101,3 +106,18 @@
                     color: #fff
                     &:hover
                         width: 45px
+
+@media only screen and (max-width: 576px ) 
+    .sectionOne
+        flex-direction: column
+        .image 
+            width: 350px
+            height: 350px
+            .gif
+                width: 300px  
+        .details-area
+            width: 400px
+            margin-left: 30px
+            .banner-form
+                width: 350px
+                

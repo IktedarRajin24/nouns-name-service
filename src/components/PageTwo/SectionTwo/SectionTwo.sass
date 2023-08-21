@@ -2,7 +2,6 @@
 
 .sectionTwo
     width: 100%
-    overflow-x: hidden
     margin: 50px 0 10px
     padding: 10px 0px 150px  
     background: linear-gradient(0deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
@@ -12,11 +11,12 @@
     .text-section
         width: 600px
         text-align: left
-        padding-left: 80px
+        padding-left: 50px
         h1
             width: 50%
         p
             width: 50%
+            margin-right: 0
             color: $grey-color
     .image-section
         position: relative
@@ -60,4 +60,38 @@
                 filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
                 
 
-    
+@media only screen and (max-width: 576px ) 
+    .sectionTwo
+        flex-direction: column
+        
+        .text-section
+            width: 350px
+            h1
+                width: 80%
+            p
+                width: 70%
+        .image-section
+            width: 350px
+            @include dFlex
+            .image-2
+                background-color: #fff
+                width: 280px
+                height: 250px   
+                margin-right: -40px
+                .user
+                    width: 180px
+                .noggle
+                    width: 86px
+                    height: 25px
+                    top: 90px
+                    right: 44px
+                .tick
+                    width: 15px
+                .image-1
+                    width: 140px
+                    height: 140px
+                    left: -65px
+                    top: -40px
+                    img
+                        width: 105px
+                        height: 105px

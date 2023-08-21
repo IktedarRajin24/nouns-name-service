@@ -51,20 +51,21 @@
     .sectionFour
         @include dFlex
         flex-direction: column
+        align-items:  start
         .text-section
             width: 80%
-            text-align: center
+            text-align: left
+            padding-left: 30px
             .heading
                 font-size: 36px
                 line-height: 75px
             .description
                 @include dFlex
                 width: 80%
-                margin-left: auto
-                margin-right: auto
         .image-section
             width: 340px
             height: 340px
+            margin: 10px auto
             img
                 width: 300px
         .shadow
