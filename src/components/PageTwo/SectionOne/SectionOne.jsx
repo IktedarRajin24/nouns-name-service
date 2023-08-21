@@ -2,12 +2,16 @@
 import React, { useEffect,useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import './SectionOne.sass'
+import { useNavigate } from 'react-router-dom';
 
 const SectionOne = () => {
     const [query, setQuery] = useState(localStorage.getItem('query'));
     const [apiQuery, setApiQuery] = useState("");
     const [available, setAvailable] =useState(localStorage.getItem('availability'));
     const [names, setNames] = useState([]);
+    const navigate = useNavigate();
+
+    const handleNavigate = ()=>{navigate('/checkout')}
 
     useEffect(()=>{
       fetch('data/names.json')
@@ -52,7 +56,7 @@ const SectionOne = () => {
                     <p>own forever for <b>$800.00</b></p>
                     <p className='price-details'>popular names are more expensive</p>
                 </div>
-                <button className='get-btn'>Get Your Name</button>
+                <button className='get-btn' onClick={query && handleNavigate}>Get Your Name</button>
                 <ul className='benefits'>
                     <li><img src="images/tick.png" alt="" />secure your nounish identity</li>
                     <li><img src="images/tick.png" alt="" />Access the NNS squad</li>

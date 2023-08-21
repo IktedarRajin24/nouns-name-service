@@ -1,0 +1,48 @@
+@import ../../index.sass
+
+.order-summary
+    width: 500px
+    height: 450px
+    background-color: #fff
+    border-radius: 10px
+    font-family: $primary-font
+    padding: 30px 15px 0 30px
+    margin-bottom: 70px
+    p
+        color: $grey-color
+        font-weight: 500
+    .order-heading
+        @include dFlex
+        justify-content: space-between
+        border-bottom: 1px solid $border-color
+        button
+            background-color: $button-color
+            color: #fff
+            border: 0
+            border-radius: 5px
+            width: 70px
+            height: 30px
+    .items
+        border-bottom: 1px solid $border-color
+        .item-number
+            font-weight: 700
+            span
+                color: $button-color
+        div
+            @include dFlex
+            justify-content: space-between
+    .subtotal, .due
+        border-bottom: 1px solid $border-color
+        @include dFlex
+        justify-content: space-between
+    .due
+        p
+            font-weight: 700
+    .subtotal
+        padding: 20px 0
+    .refund
+        p
+            font-size: 20px
+            font-weight: 700
+            color: $button-color
+            
