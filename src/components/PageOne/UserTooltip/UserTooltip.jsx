@@ -1,21 +1,39 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React,{useState} from 'react';
 import './UserTooltip.sass'
 
 const UserTooltip = (props) => {
     // console.log(props.user.about);
     const {user} = props;
-    const {name, picture, about, link} = user;
-    console.log(about)
+    const {_id, name, picture, about, link} = user;
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseOver = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseOut = () => {
+        setIsHovering(false);
+    };
+    // console.log(_id)
     return (
-        <div className='tooltip'>
-            <img className="user-image" src={picture} alt="" />
-            <h2 className='user-name'>{name} <span><img src="images/username.png" alt="" /></span></h2>
-            <p className='user-details'>{about.slice(0,150)}</p>
-            <a href={link} target="_blank"><img src="images/twitter.png" alt="" /></a>
+        <div className='userTooltip'>
+            <img onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} src={picture} alt="" className='img' id={`image-${_id}`}/>
+        
+            {
+                isHovering &&
+                <div className='tooltip'>
+                    {/* <img className="user-image" src={picture} alt="" /> */}
+                    <h2 className='user-name'>{name} <span><img src="images/username.png" alt="" /></span></h2>
+                    <p className='user-details'>{about.slice(0,150)}</p>
+                    <a href={link} target="_blank"><img src="images/twitter.png" alt="" /></a>
+                </div>
+            }
         </div>
+        
+        
     );
 };
 

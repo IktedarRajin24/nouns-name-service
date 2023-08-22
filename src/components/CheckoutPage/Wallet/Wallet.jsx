@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import './Wallet.sass'
+import { useNavigate } from 'react-router-dom';
 
 const Wallet = () => {
+    const navigate = useNavigate()
     return (
         <div className='wallet-section'>
             <div className='heading'>
@@ -29,7 +31,7 @@ const Wallet = () => {
             </div>
             <div className='transaction'>
                 <p>We will put a hold on the domain for 1 hour. The transaction must be completed within this hour. If the transaction is not completed or successful in that hour, the domain will be released for sale.</p>
-                <button>Start Transaction</button>
+                <button onClick={()=>{navigate('/success')}}>Start Transaction</button>
             </div>
         </div>
     );

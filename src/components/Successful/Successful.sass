@@ -1,0 +1,40 @@
+@import ../index.sass
+
+.success
+    font-family: $primary-font
+    background: linear-gradient(0deg, #F5F1FE 0%, rgba(245, 241, 254, 0.00) 100%)
+    @include dFlex
+    flex-direction: column
+    .name-noggle
+        width: 260px
+        height: 300px
+        padding-top: 20px
+        background-color: #fff
+        @include dFlex
+        flex-direction: column
+        border-radius: 10px
+        margin: 50px
+        p
+            color: $grey-color
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+        .success-gif
+            width: 90%
+            border-radius: 5px
+        .name
+            @include dFlex
+            justify-content: center
+            height: 40px
+            .name-noggles
+                width: 40px
+                height: 15px
+                margin: 0
+    button
+        background-color: $button-color
+        color: #fff
+        border: 0
+        border-radius: 5px
+        width: 140px
+        height: 40px
+        margin-bottom: 50px

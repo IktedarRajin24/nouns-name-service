@@ -9,6 +9,7 @@ import Main from './components/Main/Main.jsx';
 import Homepage from './components/Homepage/Homepage';
 import Registered from './components/PageTwo/Registered/Registered';
 import Checkout from './components/CheckoutPage/Checkout';
+import Successful from './components/Successful/Successful';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout/>     
+      },
+      {
+        path: "/success",
+        element: <Successful/>     
       }
     ]
   },
