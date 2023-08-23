@@ -1,0 +1,40 @@
+@import ../../index.sass
+
+
+
+.step-one
+    width: 70%
+    height: 80%
+    @include dFlex
+    flex-direction: column
+    font-family: $primary-font
+    p
+        color: #7f7f8f
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 140%
+        width: 30%
+        text-align: center
+    .progress-bar
+        margin: 30px 0
+        width: 70%
+        height: 50px
+        display: flex
+        border-radius: 144px
+        justify-content: start
+        align-items: stretch
+        background-color: #fff
+        .bar
+            background: linear-gradient(107deg, #F66B7A 0%, #CC5CD8 39.06%, #9C61F3 68.75%, #36A4F1 100%)
+    .details
+        margin-bottom: 100px
+
+    .go-to-btn
+        width: 12%
+        padding: 10px
+        border: 0    
+        background-color: $button-color
+        color: #fff
+        border-radius: 5px
+        margin-bottom: 100px

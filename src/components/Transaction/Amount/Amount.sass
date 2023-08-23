@@ -1,0 +1,76 @@
+@import ../../index.sass
+.amount
+    font-family: $primary-font
+    font-style: normal
+    @include dFlex
+    flex-direction: column
+    width: 60%
+    .top
+        @include dFlex
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 10px
+        .slider
+            @include dFlex
+            width: 16%
+            background-color: #fff
+            border: 0
+            border-radius: 25px
+            button
+                @include dFlex
+                justify-content: space-between
+                color: black
+                border: 0
+                background-color: #fff
+                border-radius: 25px
+                
+            .eth-switch
+                width: 50%
+                p
+                    margin-left: 10px
+                // background-color: #547FEF
+            .usd-switch
+                width: 50%
+                p
+                    margin-right: 10px
+                // background-color: #547FEF
+
+    .amount-section-eth, .amount-section-usd
+        width: 100%
+        border: 1px solid $border-color
+        border-radius: 10px
+        margin-bottom: 20px
+        .registration, .network, .total
+            color: #7F7F8F
+            font-size: 18px
+            font-style: normal
+            font-weight: 500
+            line-height: 100%
+            @include dFlex
+            width: 95%
+            margin: 0px auto
+            justify-content: space-between
+            padding: 10px 20px
+            border-bottom: 1px solid $border-color
+        .total
+            color: #000
+            border-bottom: 0
+            padding: 30px 20px
+            font-weight: 600
+    .buttons
+        @include dFlex
+        width: 100%
+        justify-content: end
+        margin-bottom: 100px
+        .back-btn, .begin-btn
+            width: 12%
+            padding: 10px
+            border: 0
+            background: transparent
+        .begin-btn
+            background-color: $button-color
+            color: #fff
+            border-radius: 5px
+    .d-none
+        display: none
+

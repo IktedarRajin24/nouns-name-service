@@ -1,0 +1,42 @@
+@import ../index.sass
+.transaction-page
+    font-family: $primary-font
+    font-style: normal
+    @include dFlex
+    flex-direction: column
+    background: linear-gradient(0deg, #F5F1FE 0%, rgba(245, 241, 254, 0.00) 100%)
+    .heading
+        font-size: 59.978px
+        font-weight: 500
+        line-height: 30px
+    .tag
+        font-size: 26px
+        font-weight: 600
+        line-height: 20px
+    .steps
+        @include dFlex
+        width: 50%
+        justify-content: space-between
+        .step
+            width: 210px
+            height: 170px
+            background-color: #fff
+            border-radius: 10px
+            margin-bottom: 30px
+            padding: 10px 10px
+            .step-no
+                width: 100px
+                background-color: $border-color
+                color: $button-color
+                @include dFlex
+                justify-content: space-around
+                padding: 5px 10px 5px 5px
+                border-radius: 15px
+                
+                img
+                    visibility: hidden
+            .process
+                width: 80%
+                font-size: 14px
+                font-weight: 400
+                line-height: 180%
