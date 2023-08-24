@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -15,6 +14,7 @@ import Transaction from './components/Transaction/Transaction';
 import Amount from './components/Transaction/Amount/Amount';
 import StepOne from './components/Transaction/StepOne/StepOne';
 import StepTwo from './components/Transaction/StepTwo/StepTwo';
+// eslint-disable-next-line no-unused-vars
 import StepThree from './components/Transaction/StepThree/StepThree';
 
 
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
           {
             path: "/transaction/step2",
             element: <StepTwo/>
-          },
-          {
-            path: "/transaction/success",
-            element: <Successful/>
           }
         ]
+      },
+      {
+        path: "/success",
+        element: <Successful/>     
       }
     ]
   },

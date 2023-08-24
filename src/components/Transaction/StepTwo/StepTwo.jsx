@@ -17,7 +17,7 @@ const StepTwo = () => {
 
     const handleClick = () =>{
         if(second === 60){
-            navigate('/transaction/success')
+            navigate('/success')
         }
     }
 
@@ -42,8 +42,3 @@ const StepTwo = () => {
 };
 
 export default StepTwo;
-
-// // {
-//     background: `conic-gradient((#36A4F1, #9C61F3, #F66B7A, #CC5CD8, #36A4F1))`
-//     // transition: 'background' conic-gradient( (#36A4F1, #9C61F3, #F66B7A, #CC5CD8, #36A4F1) ${second * 360 / 60}deg, #EFE9FD 0deg) 
-// }
