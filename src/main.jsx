@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -51,14 +52,10 @@ const router = createBrowserRouter([
             element: <StepTwo/>
           },
           {
-            path: "/transaction/step3",
-            element: <StepThree/>
+            path: "/transaction/success",
+            element: <Successful/>
           }
         ]
-      },
-      {
-        path: "/success",
-        element: <Successful/>     
       }
     ]
   },

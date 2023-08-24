@@ -1,0 +1,52 @@
+@import ../../index.sass
+
+.step-two
+    @include dFlex
+    flex-direction: column
+    width: 100%
+    height: 700px
+    .outer
+        width: 15%
+        height: 37.5%
+        background-color: #fff
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.10), -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+        border-radius: 50%
+        margin-bottom: 80px
+        @include dFlex
+        .inner
+            width: 75%
+            height: 75%
+            background-color: #EFE9FD
+            // background: #F66B7A 0%, #CC5CD8 39.06%, #9C61F3 68.75%, #36A4F1 100%
+            // (#36A4F1, #9C61F3, #F66B7A, #CC5CD8, #36A4F1) 
+            // background: conic-gradient( (#36A4F1, #9C61F3, #F66B7A, #CC5CD8, #36A4F1) 6deg, #EFE9FD 0deg)
+            border-radius: 50%
+            @include dFlex
+            .progress
+                width: 75%
+                height: 75%
+                background-color: #F8F5FC
+                border-radius: 50%
+                @include dFlex
+                font-family: $primary-font
+                font-size: 43px
+                font-style: normal
+                font-weight: 500
+                line-height: 140%
+                
+    .details
+        width: 40%
+        text-align: center
+        color: $grey-color
+        margin-bottom: 80px
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 140%
+    button
+        background-color: $button-color
+        color: white
+        border: 0
+        height: 40px
+        width: 10%
+        border-radius: 5px
