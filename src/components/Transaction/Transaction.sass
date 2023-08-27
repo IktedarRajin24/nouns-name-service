@@ -1,28 +1,31 @@
 @import ../index.sass
 .transaction-page
     font-family: $primary-font
+    width: 100%
+    height: 1200px
     font-style: normal
     @include dFlex
     flex-direction: column
     background: linear-gradient(0deg, #F5F1FE 0%, rgba(245, 241, 254, 0.00) 100%)
     .heading
-        font-size: 59.978px
+        font-size: 55px
         font-weight: 500
         line-height: 30px
     .tag
         font-size: 26px
         font-weight: 600
-        line-height: 20px
+        line-height: 40px
     .steps
         @include dFlex
-        width: 50%
+        width: 60%
+        height: 200px
         justify-content: space-between
+        margin-bottom: 120px
         .step
-            width: 210px
-            height: 170px
+            width: 25%
+            height: 160px
             background-color: #fff
             border-radius: 10px
-            margin-bottom: 30px
             padding: 10px 10px
             .step-no
                 width: 100px

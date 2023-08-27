@@ -16,36 +16,7 @@ const SectionTwo = () => {
         .then(res => res.json())
         .then(data=> setUsers(data))  
     },[])
-
     
-    
-    useEffect(() => {
-        
-        for (let i = 1; i <= 35; i++) {
-            const userToDisplay = users.find(user => user._id === i);
-            // const user =JSON.stringify(userToDisplay)
-            // console.log(userToDisplay);
-            // const user = `<div>
-            //     <p>${userToDisplay.name}</p>
-            // </div>`
-            if(userToDisplay){
-                const userTooltip = `<div>
-                    <p>${userToDisplay.name}</p>
-                    <p>${userToDisplay.about}</p>
-                </div>`
-                tippy(`#image-${i}`, {
-                    content: <UserTooltip />,
-                    placement: 'bottom'
-                });
-            }else{
-                console.log('failed')
-            }
-            
-        }
-    }, [users]);
-
-    
-
     const [value, copy] = useCopyToClipboard()
     const generateRandomString = () => {
         let result = '';
@@ -90,7 +61,7 @@ const SectionTwo = () => {
             </div>
             <div className='image-container-sm'>
                 {
-                    users.slice(0,1).map(user => <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/>)
+                    users.map(user => <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/>)
                 }
             </div>
             {/* <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/> */}
