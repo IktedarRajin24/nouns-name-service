@@ -61,7 +61,7 @@ const SectionTwo = () => {
             </div>
             <div className='image-container-sm'>
                 {
-                    users.map(user => <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/>)
+                    users.map(user => <UserTooltip key={user._id} user={user} />)
                 }
             </div>
             {/* <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/> */}

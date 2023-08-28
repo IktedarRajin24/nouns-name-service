@@ -55,20 +55,7 @@ const Amount = () => {
                     <p>{!usd && eth ? "0.5246 ETH": "50 USD"}</p>
                 </div>
             </div>
-            {/* <div className={`amount-section-usd ${!usd && eth ? "d-none": ""}`}>
-                <div className='registration'>
-                    <p>1 Year Registration</p>
-                    <p>50 USD</p>
-                </div>
-                <div className='network'>
-                    <p>Est. Network Fee</p>
-                    <p>50 USD</p>
-                </div>
-                <div className='total'>
-                    <p>Estimated Total</p>
-                    <p>50 USD</p>
-                </div>
-            </div> */}
+            
             <div className="buttons">
                 <button onClick={()=>{navigate('/checkout')}} className='back-btn'>Back</button>
                 <button onClick={()=>{navigate('/transaction/step1')}} className='begin-btn'>Begin</button>

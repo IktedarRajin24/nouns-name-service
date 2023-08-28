@@ -19,8 +19,8 @@ const UserTooltip = (props) => {
     };
     // console.log(_id)
     return (
-        <div className='userTooltip'>
-            <img onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} src={picture} alt="" className='img' id={`image-${_id}`}/>
+        <div className='userTooltip img' id={`image-${_id}`}>
+            <img onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} src={picture} alt=""/>
         
             {
                 isHovering &&
