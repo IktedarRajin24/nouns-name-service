@@ -45,7 +45,7 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             <div className='dashboard-heading'>
-                <div className='container owned'>
+                <div className='container owned-div'>
                     <h3>My $Noggles</h3>
                     <p className='noggle-amount'>{nns.length>0? '24535.42': '0'}</p>
                     <div className='details'>
