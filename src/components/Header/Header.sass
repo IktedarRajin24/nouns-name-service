@@ -1,11 +1,15 @@
 @import ../index
+
+.d-none
+    display: none
+
     
 .nav-bar
     @include dFlex
     justify-content: space-between
     padding-left: 166px
     padding-right: 100px
-    background: linear-gradient(180deg, #FEF9FF 0%, rgba(254, 249, 255, 0.00) 100%)
+    background: #FEF9FF 
     .logo
         @include dFlex
         .nns-mobile
@@ -17,6 +21,22 @@
             font-style: normal
             font-weight: 700
             line-height: 29.885px
+    .slider
+        width: 30%
+        height: 40px
+        filter: drop-shadow(0px 20px 40px rgba(114, 89, 185, 0.10))
+        background-color: #fff
+        border-radius: 50px
+        button
+            border: 0
+            border-radius: 50px
+            background-color: #fff
+            color: #000
+            width: 50%
+            height: 100%
+        .blue-btn
+            background-color: $button-color
+            color: #fff
     .buttons
         .sign-in-btn
             background-color: $button-color
@@ -28,6 +48,20 @@
             font-size: 14px
             border: 0px
             border-radius: 5px
+        .username
+            border-radius: 19px 5px 5px 19px
+            border: 1px solid #F1ECFC
+            background: #FFF
+            width: 160px
+            height: 40px
+            padding: 10px 10px
+            font-family: $button-font
+            font-size: 12px
+            color: #000
+            @include dFlex
+            justify-content: space-between
+
+            
         .header-icons
             width: 40px
             height: 40px
@@ -57,5 +91,7 @@
             margin-left: 5px
             .header-icons
                 margin-left: 5px 
+            .d-none
+                display: none
 
                 

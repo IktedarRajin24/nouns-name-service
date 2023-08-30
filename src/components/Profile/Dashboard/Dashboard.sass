@@ -1,0 +1,127 @@
+@import ../../index.sass
+
+.dashboard
+    font-family: $primary-font
+    width: 100%
+    height: auto
+    background: linear-gradient(0deg, #F5F1FE 0%, rgba(245, 241, 254, 0.00) 100%)
+    .dashboard-heading
+        width: 80%
+        height: 250px
+        @include dFlex
+        justify-content: space-between
+        margin: 20px auto
+        
+        .container
+            background-color: #fff
+            width: 25%
+            height: 90%
+            padding: 10px
+            border-radius: 10px
+            position: relative
+            h3
+                padding-bottom: 10px
+                border-bottom: 1px solid $border-color
+            .noggle-amount
+                font-size: 40px
+                font-style: normal
+                font-weight: 600
+                line-height: 100%
+                
+            .details
+                @include dFlex
+                width: 90%
+                position: absolute
+                bottom: 10px
+                justify-content: space-between
+                p
+                    color: $grey-color
+                    font-size: 12px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 100%
+                    width: 50%
+                button
+                    width: 40%
+                    height: 40px
+                    border: 0
+                    border-radius: 5px
+        .owned
+            button
+                background-color: $button-color
+                color: #fff
+        .pending, .staking-status
+            button
+                background-color: $border-color
+                color: $button-color
+        .staking-status
+            p
+                font-size: 10px
+                font-style: normal
+                font-weight: 400
+                line-height: 15px
+                width: 20%
+                height: 25px
+                @include dFlex
+                justify-content: space-around
+                border-radius: 10px
+                span
+                    height: 10px
+                    width: 10px
+                    border-radius: 50%
+            .details
+                justify-content: end
+            .active
+                background-color: rgba(87, 202, 181, 0.15)
+                color: #57CAB5
+            .inactive
+                background-color: rgba(255, 99, 85, 0.15)
+                color: #FF6355
+            .green-dot
+                background-color: #57CAB5
+            .red-dot
+                background-color: #FF6355
+    .nns-info
+        width: 80%
+        margin: 20px auto
+        
+        .info
+            color: $grey-color
+            background-color: #fff
+            border: 1px solid $border-color
+            border-radius: 10px
+            padding: 0px 2%
+            font-size: 12px
+            @include dFlex
+            justify-content: space-between
+            .nns-numbers
+                @include dFlex
+                width: 18%
+                justify-content: space-between
+        .nns-section
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            width: 100%
+            gap: 30px
+            padding-bottom: 150px
+            padding-top: 100px
+
+
+        .no-nns
+            @include dFlex
+            flex-direction: column
+            width: 100%
+            height: 400px
+            text-align: center
+            h1
+                width: 60%
+            button
+                border: 0
+                border-radius: 5px
+                width: 30%
+                height: 40px
+                background-color: $button-color
+                color: #fff
+            
+.d-none
+    display: none

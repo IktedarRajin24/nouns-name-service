@@ -11,7 +11,10 @@ const SectionOne = () => {
     const [names, setNames] = useState([]);
     const navigate = useNavigate();
 
-    const handleNavigate = ()=>{navigate('/checkout')}
+    const handleNavigate = ()=>{
+        localStorage.setItem('user', "Jack Black")
+        navigate('/checkout')
+    }
 
     useEffect(()=>{
       fetch('data/names.json')
@@ -21,8 +24,6 @@ const SectionOne = () => {
 
     useEffect(()=>{
       
-      // names.slice(0,1).find(name => console.log(name.name) )
-      // console.log(found);
       const timeoutID = setTimeout(() => {
         setApiQuery(query);
         setAvailable(names.find(name => name.name === query) ? true : false);
@@ -34,6 +35,7 @@ const SectionOne = () => {
     const handleChange = (e) =>{
       setQuery(e.target.value);
       setAvailable(names.find(name => name.name === query)? true: false)
+      
     }
     return (
         <div className='sectionOne'>

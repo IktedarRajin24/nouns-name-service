@@ -16,6 +16,9 @@ import StepOne from './components/Transaction/StepOne/StepOne';
 import StepTwo from './components/Transaction/StepTwo/StepTwo';
 // eslint-disable-next-line no-unused-vars
 import StepThree from './components/Transaction/StepThree/StepThree';
+import Profile from './components/Profile/Profile';
+import Dashboard from './components/Profile/Dashboard/Dashboard';
+import Staking from './components/Profile/Staking/Staking';
 
 
 const router = createBrowserRouter([
@@ -34,6 +37,21 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout/>     
+      },
+      {
+        path: "/profile",
+        element: <Profile/>   ,
+        children: [
+          {
+            path: "/profile/dashboard",
+            element: <Dashboard/>
+
+          },
+          {
+            path: "/profile/staking",
+            element: <Staking/>
+          }
+        ]  
       },
       {
         path: "/transaction",
