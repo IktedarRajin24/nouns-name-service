@@ -50,8 +50,8 @@ const SectionOne = () => {
                 </div>
                 
                 <div className='availability'>
-                    <span className={` ${!available? "available" : "hidden"}`}><img src="images/tick.png" alt="" /><p>Your NNS is available</p></span>
-                    <span className={` ${available? "unavailable" : "hidden"}`}><img src="images/cross.png" alt="" /><p>Your NNS is not available</p></span>
+                    <span className={` ${!available? "name-available" : "hidden"}`}><img src="images/tick.png" alt="" /><p>Your NNS is available</p></span>
+                    <span className={` ${available? "name-unavailable" : "hidden"}`}><img src="images/cross.png" alt="" /><p>Your NNS is not available</p></span>
                 </div>
                 <p className='search-result'>{query}</p>
                 <div className='price-section'>
