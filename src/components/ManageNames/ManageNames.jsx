@@ -1,44 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import './ManageNames.sass'
+import {addToDB, getNames} from '../../utilities/fakeDB'
 
 const ManageNames = () => {
-    const names = [
-        {
-            id: 1,
-            name: "howimeet",
-            status: "available"
-        },
-        {
-            id: 2,
-            name: "memeWorld",
-            status: "unavailable"
-        },
-        {
-            id: 3,
-            name: "hawkeye",
-            status: "available"
-        },
-        {
-            id: 4,
-            name: "Superman",
-            status: "available"
-        },
-        {
-            id: 5,
-            name: "CreativeAwesome",
-            status: "unavailable"
-        },
-        {
-            id: 6,
-            name: "GGEZ",
-            status: "available"
-        },
-        {
-            id: 7,
-            name: "appleBoy",
-            status: "available"
-        },
-    ]
+    const [names, setNames] = useState([]);
+    
+    useEffect(()=>{
+        fetch('data/myNames.json')
+        .then(res => res.json())
+        .then(data => addToDB(data))
+    },[])
+    useEffect(()=>{
+        const storedNames = getNames('names')
+        setNames(storedNames)
+        // console.log(names);
+    },[])
+    
     return (
         <div className='manage-names'>
             <h1 className='heading'>Manage your names</h1>
@@ -55,6 +33,12 @@ const ManageNames = () => {
                     <option value=""></option>
                     <option value=""></option>
                 </select>
+            </div>
+            <div className='names-section'>
+                {
+                    names.map(name => name.name)
+                }
+
             </div>
             
         </div>

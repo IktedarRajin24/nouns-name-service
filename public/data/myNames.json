@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "howimeet",
+        "status": "available"
+    },
+    {
+        "id": 2,
+        "name": "memeWorld",
+        "status": "unavailable"
+    },
+    {
+        "id": 3,
+        "name": "hawkeye",
+        "status": "available"
+    },
+    {
+        "id": 4,
+        "name": "Superman",
+        "status": "available"
+    },
+    {
+        "id": 5,
+        "name": "CreativeAwesome",
+        "status": "unavailable"
+    },
+    {
+        "id": 6,
+        "name": "GGEZ",
+        "status": "available"
+    },
+    {
+        "id": 7,
+        "name": "appleBoy",
+        "status": "available"
+    }
+]

@@ -19,6 +19,7 @@ import StepThree from './components/Transaction/StepThree/StepThree';
 import Profile from './components/Profile/Profile';
 import Dashboard from './components/Profile/Dashboard/Dashboard';
 import Staking from './components/Profile/Staking/Staking';
+import ManageNames from './components/ManageNames/ManageNames';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout/>     
+      },
+      {
+        path: "/manageNames",
+        element: <ManageNames/>     
       },
       {
         path: "/profile",
