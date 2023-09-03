@@ -1,0 +1,50 @@
+@import ../../index.sass
+
+.name
+    width: 100%
+    background-color: #fff
+    padding: 0px 10px
+    @include dFlex
+    justify-content: space-between
+    margin-bottom: 20px
+    border: 1px solid $border-color
+    border-radius: 5px
+    
+    font-style: normal
+    font-weight: 400
+    line-height: 180%
+    .name-tag
+        color: $grey-color
+        font-size: 14px
+    .status-bar
+        width: 40%
+        @include dFlex
+        justify-content: space-around
+        .status
+            width: 30%
+            font-size: 12px
+            @include dFlex
+            border-radius: 50px
+        button
+            width: 25%
+            height: 30px
+            border: 0
+            border-radius: 5px
+            background-color: #fff
+            color: #fff
+        .view-btn
+            background-color: #2081E2
+        .buy-btn
+            background-color: $button-color
+        .delete-btn
+            height: 20px
+            width: 20px
+
+.available
+    background-color: #35CA8233
+    color: #35CA82
+.unavailable
+    background-color: #FF525233
+    color: #FF5252
+.d-none
+    display: none
