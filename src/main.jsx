@@ -41,7 +41,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/manageNames",
-        element: <ManageNames/>     
+        element: <ManageNames/>,
+        loader: ()=> fetch('data/myNames.json')     
       },
       {
         path: "/profile",

@@ -3,20 +3,11 @@ import React, { useEffect, useState } from 'react';
 import './ManageNames.sass'
 import {addToDB, getNames} from '../../utilities/fakeDB'
 import Names from './Names/Names';
+import { useLoaderData } from 'react-router-dom';
 
 const ManageNames = () => {
-    const [names, setNames] = useState([]);
     
-    useEffect(()=>{
-        fetch('data/myNames.json')
-        .then(res => res.json())
-        .then(data => addToDB(data))
-    },[])
-    useEffect(()=>{
-        const storedNames = getNames('names')
-        setNames(storedNames)
-        // console.log(names);
-    },[])
+    const names = useLoaderData()
     
     return (
         <div className='manage-names'>
