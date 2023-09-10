@@ -1,0 +1,253 @@
+.squad_list {
+    display: grid;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    .member {
+      position: relative;
+  
+      .member_img {
+        height: 70px;
+        width: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 16px;
+      }
+  
+      .member_info {
+        position: absolute;
+        z-index: 100;
+        width: 233px;
+        background: #ffffff;
+        border: 1px solid #e5e1fc;
+        box-shadow: 0px 20px 40px rgba(114, 89, 185, 0.1);
+        border-radius: 20px;
+        padding: 1rem;
+        text-align: center;
+        left: -100px;
+        top: 2rem;
+        padding-top: 4rem;
+  
+        a {
+          text-decoration: none;
+        }
+  
+        h4 {
+          font-weight: 500;
+          font-size: 16px;
+          color: #343434;
+        }
+  
+        p {
+          font-size: 10px;
+          line-height: 180%;
+          text-align: center;
+          color: #7f7f8f;
+        }
+      }
+    }
+  
+    .active {
+      .member_info {
+        visibility: visible;
+      }
+      img {
+        z-index: 1000 !important;
+        position: relative;
+      }
+      .member_img {
+        z-index: 1000 !important;
+        position: relative;
+      }
+    }
+    .inactive {
+      .member_info {
+        visibility: hidden;
+      }
+    }
+  
+    .member0 {
+      grid-column: 1 / span 1;
+      grid-row: 2;
+    }
+    .member1 {
+      grid-column: 1 / span 1;
+      grid-row: 3;
+    }
+    .member2 {
+      grid-column: 2 / span 1;
+      grid-row: 2;
+    }
+    .member3 {
+      grid-column: 3 / span 1;
+      grid-row: 1;
+    }
+    .member4 {
+      grid-column: 3 / span 1;
+      grid-row: 2;
+    }
+    .member5 {
+      grid-column: 3 / span 1;
+      grid-row: 3;
+    }
+    .member6 {
+      grid-column: 3 / span 1;
+      grid-row: 4;
+    }
+    .member7 {
+      grid-column: 4 / span 1;
+      grid-row: 1;
+    }
+    .member8 {
+      grid-column: 4 / span 1;
+      grid-row: 4;
+    }
+    .member9 {
+      grid-column: 5 / span 1;
+      grid-row: 1;
+    }
+    .member10 {
+      grid-column: 5 / span 1;
+      grid-row: 2;
+    }
+    .member11 {
+      grid-column: 5 / span 1;
+      grid-row: 3;
+    }
+    .member12 {
+      grid-column: 5 / span 1;
+      grid-row: 4;
+    }
+    .member13 {
+      grid-column: 6 / span 1;
+      grid-row: 1;
+    }
+    .member14 {
+      grid-column: 6 / span 1;
+      grid-row: 2;
+    }
+    .member15 {
+      grid-column: 6 / span 1;
+      grid-row: 3;
+    }
+    .member16 {
+      grid-column: 6 / span 1;
+      grid-row: 4;
+    }
+    .member17 {
+      grid-column: 7 / span 1;
+      grid-row: 2;
+    }
+    .member18 {
+      grid-column: 7 / span 1;
+      grid-row: 3;
+    }
+    .member19 {
+      grid-column: 8 / span 1;
+      grid-row: 2;
+    }
+    .member20 {
+      grid-column: 8 / span 1;
+      grid-row: 3;
+    }
+    .member21 {
+      grid-column: 9 / span 1;
+      grid-row: 1;
+    }
+    .member22 {
+      grid-column: 9 / span 1;
+      grid-row: 2;
+    }
+    .member23 {
+      grid-column: 9 / span 1;
+      grid-row: 3;
+    }
+    .member24 {
+      grid-column: 9 / span 1;
+      grid-row: 4;
+    }
+    .member25 {
+      grid-column: 10 / span 1;
+      grid-row: 1;
+    }
+    .member26 {
+      grid-column: 10 / span 1;
+      grid-row: 4;
+    }
+    .member27 {
+      grid-column: 11 / span 1;
+      grid-row: 1;
+    }
+    .member28 {
+      grid-column: 11 / span 1;
+      grid-row: 2;
+    }
+    .member29 {
+      grid-column: 11 / span 1;
+      grid-row: 3;
+    }
+    .member30 {
+      grid-column: 11 / span 1;
+      grid-row: 4;
+    }
+    .member31 {
+      grid-column: 12 / span 1;
+      grid-row: 1;
+    }
+    .member32 {
+      grid-column: 12 / span 1;
+      grid-row: 2;
+    }
+    .member33 {
+      grid-column: 12 / span 1;
+      grid-row: 3;
+    }
+    .member34 {
+      grid-column: 12 / span 1;
+      grid-row: 4;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .squad_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+  
+      .left_side_member {
+        .member_info {
+          left: 0;
+        }
+      }
+      .right_side_member {
+        .member_info {
+          right: 0;
+          left: auto;
+        }
+      }
+      .midle_member {
+        .member_info {
+          left: -90px;
+        }
+      }
+  
+      .member {
+        &:nth-of-type(35) {
+          .member_info {
+            left: auto;
+            right: 0;
+          }
+        }
+        .member_info {
+          padding: 0.5rem;
+          padding-top: 4rem;
+        }
+      }
+    }
+  }
+  

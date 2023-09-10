@@ -6,11 +6,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCopyToClipboard } from 'usehooks-ts';
 import UserTooltip from '../UserTooltip/UserTooltip';
-import tippy from 'tippy.js';
-// import Tippy from '@tippyjs/react';
+import classes from './SectionTwo.module.scss';
 
 const SectionTwo = () => {
     const [users, setUsers] = useState([]);
+    const [hoverUser, setHoverUser] = useState(null);
+
     useEffect(()=>{
         fetch('data/userDetails.json')
         .then(res => res.json())
@@ -54,7 +55,7 @@ const SectionTwo = () => {
                 <ToastContainer/>
                 
             </div>
-            <div className='image-container-lg'>
+            {/* <div className='image-container-lg'>
                 {
                     users.map(user => <UserTooltip key={user._id} user={user} />)
                 }
@@ -63,8 +64,46 @@ const SectionTwo = () => {
                 {
                     users.map(user => <UserTooltip key={user._id} user={user} />)
                 }
+            </div> */}
+            <div className={classes.squad_list}>
+        {users.map((member, indx) => (
+          <div
+            key={`member${indx}`}
+            className={`${classes[`member${indx}`]} ${classes.member} ${
+              hoverUser === indx ? classes.active : classes.inactive
+            } ${
+              indx + 1 === 0 || (indx + 1) % 4 === 1
+                ? classes.left_side_member
+                : (indx + 1) % 4 === 0
+                ? classes.right_side_member
+                : classes.midle_member
+            }`}
+            onMouseOver={() => {
+              setHoverUser(indx);
+            }}
+            onMouseLeave={() => {
+              setHoverUser(null);
+            }}
+          >
+            <div
+              className={classes.member_img}
+              style={{ backgroundImage: `url(${member.picture})` }}
+            ></div>
+            <div className={classes.member_info}>
+              <h4> {member.name}</h4>
+              <p>{member.about} </p>
+              <a href={member.twitter} target="blank" rel="norefferer">
+                <img
+                  width={30}
+                  height={24}
+                  alt="twitter"
+                  src="/images/twitter.png"
+                />
+              </a>
             </div>
-            {/* <img key={user._id} src={user.picture} className='img' id={`image-${user._id}`}/> */}
+          </div>
+        ))}
+      </div>
         </div>
     );
 };
